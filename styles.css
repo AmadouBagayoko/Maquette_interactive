@@ -54,17 +54,18 @@ body {
      color: black;
      display: flex;
      flex-direction: column;
-     justify-content: center;   
+     justify-content: center; 
+     height: 80%;  
  }
  .Profile{
-     height: 50vh;
-     position: relative;
-     background-color: black;
-     border-bottom-right-radius: 50%;
-     border-bottom-left-radius: 50%;
-     text-align: center;
-     bottom: 100px;
-     color: white;
+    height: 50vh;
+    position: relative;
+    margin-bottom: 10%;
+    background-color: black;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    text-align: center;
+    color: white;
  }
  .img{
      width: 80%;
@@ -86,8 +87,13 @@ body {
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 30px;
+    justify-content: flex-start; /* Pour coller les éléments en haut du conteneur */
+    align-items: flex-start;
+     padding: 10px 0px 0 50px; 
+     
+    
+    
+    
     
  }
  .contact p{
@@ -100,6 +106,7 @@ body {
  .formation{
   background-color: black;
   color: white;
+  position: relative;
   height: 90vh;
   padding: 20px;
   justify-content: center;
@@ -112,19 +119,59 @@ body {
  
  }
  .formation p {
-     font-size: 15px;
-     padding: 0 10%;
+     font-size: 65%;
+     padding: 0 15%;
 
  
  }
  .formation h4 {
- font-size: 13px;
- padding: 0 10%;
+ font-size: 65%;
+ padding: 0 15%;
  }
  .formation b{
-     font-size: 15px;
+     font-size: 65%;
      padding: 0;
  }
+ .my-profil {
+    font-size: 24px; /* Tu peux ajuster selon ton besoin */
+    color: #58BFC6;
+    margin: 10px 0;
+    margin-left: 10%;
+    font-weight: 900;
+}
+ .description {
+    font-size: 14px; /* Tu ajustes ici aussi */
+    line-height: 1.5; /* Pour améliorer la lisibilité */
+    margin-left: 2%;
+ }
+ .titre-cv {
+    font-size: 20px; /* Tu peux ajuster selon ton besoin */
+    color: #58BFC6;
+    margin-left: 10%;
+    font-weight: 900;
+    margin: 10px 0;
+    margin-left: 10%;
+}
+.job{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 14px;
+}
+.titre-gras
+{
+    font-weight: bold;
+}
+.competences p {
+    font-size: 80%;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    justify-content: space-between;
+}
+ 
  
  
  
