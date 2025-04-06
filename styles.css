@@ -1,4 +1,9 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -40,166 +45,219 @@ body {
      font-size: 15px;
      font-weight: bold;
  }
+
  .content-main{
-     padding: 20 auto;
-     width: 50%;
-     margin: 0 auto;
-     display: grid;
-     grid-template-columns: 1fr 2fr;
-     gap: 20px;
- }
- .left{
-     background-color: #58BFC6;
-      /* padding: 20px;  */
-     color: black;
-     display: flex;
-     flex-direction: column;
-     justify-content: center; 
-     height: 80%;  
- }
- .Profile{
-    height: 50vh;
-    position: relative;
-    margin-bottom: 10%;
+    padding: 20 auto;
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+
+/* Colonne Gauche */
+.left {
+    background-color: #58BFC6;
+    /* padding: 30px; */
+    color: white;
+    
+}
+
+.profile {
+    height: 45vh;
+    text-align: center;
+    margin-bottom: 30px;
     background-color: black;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
-    text-align: center;
-    color: white;
- }
- .img{
-     width: 80%;
-     height: 50vh;
-     margin-left: 10%;
-     /* padding: 1px; */
-     border-radius: 50%;
- 
- }
- .img img{
-     object-fit: cover;
-     width: 93%;
-     clip-path: circle(80);
-     height: 65%;
-     border-radius: 50%;
- }
- .contact{
-    color: black;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Pour coller les éléments en haut du conteneur */
-    align-items: flex-start;
-     padding: 10px 0px 0 50px; 
-     
     
-    
-    
-    
- }
- .contact p{
-     margin: 10px 20px;
-     font-size: 13px;
- }
- .en-gras{
-     font-weight: 900;
- }
- .formation{
-  background-color: black;
-  color: white;
-  position: relative;
-  height: 90vh;
-  padding: 20px;
-  justify-content: center;
-  border-top-left-radius: 140px;
-  border-top-right-radius: 140px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px ;
-  text-align: left;
-  margin: 0 5%;
- 
- }
- .formation p {
-     font-size: 65%;
-     padding: 0 15%;
+}
 
- 
- }
- .formation h4 {
- font-size: 65%;
- padding: 0 15%;
- }
- .formation b{
-     font-size: 65%;
-     padding: 0;
- }
- .my-profil {
-    font-size: 24px; /* Tu peux ajuster selon ton besoin */
-    color: #58BFC6;
-    margin: 10px 0;
+.img{
+    width: 80%;
+    height: 50vh;
     margin-left: 10%;
-    font-weight: 900;
+    /* padding: 1px; */
+    border-radius: 50%; 
+
 }
- .description {
-    font-size: 14px; /* Tu ajustes ici aussi */
-    line-height: 1.5; /* Pour améliorer la lisibilité */
-    margin-left: 2%;
- }
- .titre-cv {
-    font-size: 20px; /* Tu peux ajuster selon ton besoin */
-    color: #58BFC6;
-    margin-left: 10%;
-    font-weight: 900;
-    margin: 10px 0;
-    margin-left: 10%;
+.img img{
+    object-fit: cover;
+    width: 80%;
+    clip-path: circle(80);
+    height: 60%;
+    border-radius: 50%;
 }
-.job{
+
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+.contact h3, .contact p {
+    color: black;
+    padding: 10px;
+    text-align: left;
+}
+h3 {
+    font-size: 18px;
+    margin: 25px 0 15px;
+    color: white;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 i {
+    color: black;
+}
+.formation{
+    background-color: black;
+    color: white;
+    position: relative;
+    height: 90vh;
+    padding: 20px;
+    justify-content: center;
+    border-top-left-radius: 140px;
+    border-top-right-radius: 140px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px ;
+    text-align: left;
+    margin: 0 5%;
+   
+   }
+  
+
+ .formation-item p, .ref-item p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: white
+}
+
+
+.contact p i, .ref-item p i {
+    width: 20px;
+    text-align: center;
+    color: black;
+}
+
+.formation-item, .ref-item {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.formation-item h4, .ref-item h4 {
+    font-size: 10px;
+    margin: 15px 0 5px;
+    color: white;
+}
+
+.formation-item span {
+    display: block;
+    font-size: 10px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+/* Colonne Droite */
+.right {
+    background-color: white;
+    padding: 40px;
+}
+
+.profil p, .exp-item .description {
     font-size: 14px;
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.7;
 }
-.titre-gras
-{
-    font-weight: bold;
+.profil h3, .experience h3, .competences h3, .langues h3 , .loisirs h3 {
+    font-size: 20px;
+    color: #58BFC6;
+
 }
-.competences p {
-    font-size: 80%;
+
+.exp-item {
+    margin-bottom: 25px;
 }
-.flex {
+
+.job-header {
     display: flex;
-    flex-direction: row;
-    margin-left: 10%;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }
- 
- 
- 
- 
- /*
- .image-container {
-     margin: 20px auto;
-     width: 80%;
-     max-width: 400px;
- }
- 
- .image-container img {
-     width: 100%;
-     border-radius: 10px;
- }
- 
- .btn {
-     display: inline-block;
-     margin-top: 20px;
-     padding: 15px 30px;
-     background-color: black;
-     color: white;
-     text-decoration: none;
-     font-size: 18px;
-     border-radius: 25px;
- }
- 
- .btn:hover {
-     background-color: #333;
- }
- 
- */
+
+.job-header h4 {
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+}
+
+.job-header span {
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+
+.company {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.competences ul, .langues ul, .loisirs ul {
+    list-style: none;
+    margin-left: 5px;
+    color: black
+}
+
+.competences li, .langues li, .loisirs li {
+    margin: 8px 0;
+    font-size: 14px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.competences li::before, .langues li::before, .loisirs li::before {
+    content: "•";
+    color:black;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.bottom-section {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.langues, .loisirs {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .bottom-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
