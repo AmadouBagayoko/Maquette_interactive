@@ -1,6 +1,6 @@
 /* RESET & BASE STYLES */
 :root {
-    --main-color: #58BFC6; /* Valeur par défaut */
+    --main-color: #58BFC6;
 }
 
 * {
@@ -14,6 +14,13 @@ body {
     background-color: #f5f5f5;
     line-height: 1.6;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    padding: 20px;
+    
 }
 .principale{
     width: 100vw;
@@ -50,11 +57,14 @@ h1{
     font-size: 15px;
     font-weight: bold;
 }
+
 #cv {
-    width: 210mm;        /* largeur d'une page A4 */
-    height: 297mm;       /* hauteur d'une page A4 */
-    padding: 15px;
-  }
+    width: 210mm;
+    height: 297mm;
+    /* padding: 15px; */
+    margin: auto;/* Centre le CV */
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
   
 /* MAIN LAYOUT */
 .content-main{
@@ -79,6 +89,7 @@ h1{
     border-bottom-right-radius: 140px ;
     text-align: center;
     color: white;
+    height: 100%;
 }
 
 .profile h1 {
@@ -95,8 +106,9 @@ h1{
 .img {
     width: 80%;
     aspect-ratio: 1/1;
-    margin: 0 auto;
+    margin: 10px auto;
     border-radius: 50%;
+    border: #f5f5f5, solid ,5px;
     overflow: hidden;
     
 }
@@ -122,7 +134,7 @@ h1{
 
 .contact p {
     color: black;
-    padding: 10px 0 10px 0;
+    padding: 10 0 0 0;
     text-align: left;
     font-size: 13px;
 
@@ -180,7 +192,7 @@ h1{
     background-color: black;
     border-radius: 120px 120px 0 0;
     /* padding: 30px 25px; */
-    margin: 5px 10px;
+    margin: 10px 10px 0 10px;
     color: white;
 }
 
@@ -420,7 +432,7 @@ h1{
     display: flex;
     justify-content: center;
     gap: 20px; /* Espacement augmenté entre les boutons */
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 /* Style de base commun */
@@ -494,7 +506,8 @@ h1{
 }
 @media print{
     /* Éléments à masquer */
-    .color-container {
+    .color-container,
+    .no-print {
         display: none !important;
     }
 }
@@ -535,6 +548,37 @@ h1{
     }
 }
 /* RESPONSIVE DESIGN */
+@media screen and (max-height: 297mm) {
+    body {
+        justify-content: flex-start; /* Aligne en haut sur très petits écrans */
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 210mm) {
+    #cv {
+        width: 100%;
+        height: auto;
+        min-height: 297mm;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #cv {
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cv {
+        transform: scale(0.8);
+    }
+}
 /* @media (max-width: 768px) {
     .content-main {
         grid-template-columns: 1fr;
