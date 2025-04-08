@@ -1,24 +1,22 @@
-<button onclick="window.print()" class="telecharger-btn">
-    <i class="fas fa-download"></i> Télécharger mon CV
-</button>
-
-// document.getElementById('color-picker').addEventListener('input', function(e) {
-//     const newColor = e.target.value;
-    
-//     // Change la couleur principale
-//     document.documentElement.style.setProperty('--main-color', newColor);
-    
-//     // Met à jour les éléments spécifiques
-//     document.querySelectorAll('.left, .telecharger-btn, .retour-btn:hover').forEach(el => {
-//         el.style.backgroundColor = newColor;
-//     });
-    
-//     // Met à jour les bordures et textes
-//     document.querySelectorAll('.retour-btn, .formation, .references').forEach(el => {
-//         el.style.borderColor = newColor;
-//     });
-    
-//     document.querySelectorAll('.retour-btn, .degree-year, h3').forEach(el => {
-//         el.style.color = newColor;
-//     });
-// });
+function telecharger() {
+    const element = document.getElementById('cv');
+  
+    const opt = {
+      margin:       0,
+      filename:     'mon_cv.pdf',
+      image:        { type: 'jpeg', quality: 1 },
+      html2canvas:  { 
+        scale: 2,
+        useCORS: true
+      },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+  
+    html2pdf().set(opt).from(element).save();
+  }
+  
+//   fonction pour changer de couleur
+document.getElementById('color-picker').addEventListener('input', function() {
+    const newColor = this.value;
+    document.documentElement.style.setProperty('--main-color', newColor);
+});

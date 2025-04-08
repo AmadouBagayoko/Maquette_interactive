@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <title>CV Amadou Bagayoko</title>
 </head>
 <body>
-    <main class="content-main">
+    <section>
+         <div class="buttons-container">
+        <button class="telecharger-btn" onclick="telecharger()">
+            <i class="fa fa-download"></i> Télécharger
+          </button>
+         <!-- Bouton Retour -->
+         <a href="index.html" class="retour-btn">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+        </div>
+   </section>
+    <main class="content-main" id="cv">
         <!-- Colonne Gauche -->
         <section class="left">
             <div class="profile">
@@ -43,16 +56,13 @@
                         <div class="degree">
                             <p class="degree-name">Licence 3 en Informatique</p>
                             <p class="degree-year">2023-2024</p>
+                            <h4 class="lycee">LYCEE PRIVEE MARY SAINT CLAIRE</h4>
+                            <div class="degree">
+                                <p class="degree-name">Baccalauréat Malien en Sciences Expérimentales</p>
+                                <p class="degree-year">2020-2021</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="school">
-                        <h4>LYCEE PRIVEE MARY SAINT CLAIRE</h4>
-                        <div class="degree">
-                            <p class="degree-name">Baccalauréat Malien en Sciences Expérimentales</p>
-                            <p class="degree-year">2020-2021</p>
-                        </div>
-                    </div>
+        
                 </div>
         
                 <!-- Section Références -->
@@ -84,11 +94,11 @@
 
         <!-- Colonne Droite -->
         <section class="right">
-                <!-- Sélecteur de couleur -->
-    <div class="color-picker-container">
-        <label for="color-picker">Couleur :</label>
-        <input type="color" id="color-picker" value="#58BFC6">
-    </div>
+         <!-- Sélecteur de couleur -->
+         <div class="color-container">
+            <label for="color-picker">Couleur :</label>
+            <input type="color" id="color-picker" value="#58BFC6" title="Choisissez la couleur principale">
+        </div>  
 
             <div class="profil">
                 <h3><i class="fa fa-user" aria-hidden="true"></i> PROFIL</h3>
@@ -166,18 +176,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="buttons-container">
-                <!-- Bouton Télécharger CV -->
-                <a href="./img/cv-amadou.pdf" download="CV_Amadou_Bagayoko.pdf" class="telecharger-btn">
-                    <i class="fas fa-download"></i> Télécharger
-                </a>
-                
-                 <!-- Bouton Retour -->
-                 <a href="index.html" class="retour-btn">
-                    <i class="fas fa-arrow-left"></i> Retour
-                </a>
-            </div>
+            <!-- section pour boutons -->
+           
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
