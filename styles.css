@@ -549,14 +549,12 @@ h1{
 /* Version mobile pour les boutons */
 @media (max-width: 480px) {
     .buttons-container {
-   
-        position: relative;
-        margin-bottom: 2%;
-        left: 6%;
+        position: absolute;
+        top: 0%;
+        left: 21%;
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        gap: 15px;
     }
     
     .telecharger-btn,
@@ -572,7 +570,7 @@ h1{
 @media screen and (max-height: 297mm) {
     body {
         justify-content: flex-start; /*Aligne en haut sur très petits écrans*/
-        padding-top: 20px;
+        padding-top: 55px;
     }
 }
 
